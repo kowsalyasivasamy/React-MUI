@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.scss";
+
+import MButton from "./MButton/MButton";
+import MInput from "./MInput/MInput";
+import MSelect from "./MSelect/MSelect";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MButton />}></Route>
+          <Route path="/button" element={<MButton />}></Route>
+          <Route path="/input" element={<MInput />}></Route>
+          <Route path="/select" element={<MSelect />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }
