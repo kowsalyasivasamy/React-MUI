@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Input, InputLabel, Button, Box, FormControl } from "@mui/material";
 
 const MInput = () => {

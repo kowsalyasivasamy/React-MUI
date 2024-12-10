@@ -4,9 +4,10 @@ import {
   Stack,
   ThemeProvider,
   IconButton,
+  ButtonGroup
 } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
-import { Delete, Send, Chat } from "@mui/icons-material";
+import { Delete, Send, Chat, ArrowDropDown } from "@mui/icons-material";
 import { lime } from "@mui/material/colors";
 import "./MButton.scss";
 
@@ -81,7 +82,7 @@ const MButton = () => {
         </Button>
       </Stack>
 
-      {/* Adding Icons using startIcon */}
+      {/* Adding Icons using startIcon/endIcon */}
       <Stack direction={"row"} spacing={2}>
         <Button variant="contained" startIcon={<Delete />} color="secondary">
           Small
@@ -122,12 +123,27 @@ const MButton = () => {
         </IconButton>
       </Stack>
 
-      {/* LoadingButton */}
+      {/* LoadingButton variant-outlined/contained/text/string*/}
       <Stack direction={"row"} spacing={2}>
         <LoadingButton loading variant="outlined">
           Submit
         </LoadingButton>
       </Stack>
+
+      <ButtonGroup variant="outlined" aria-label="Basic button group" size="medium">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup variant="outlined" aria-label="Basic button group" size="medium" orientation="vertical">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+      </ButtonGroup>
+      <ButtonGroup variant="contained">
+          <Button>Split Button</Button>
+          <Button size="small"><ArrowDropDown /></Button>
+      </ButtonGroup>
     </>
   );
 };
