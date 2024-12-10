@@ -1,5 +1,6 @@
 import {useState} from 'react';
 import {Radio, RadioGroup, FormControl, FormControlLabel, FormLabel} from "@mui/material";
+import {pink} from '@mui/material/colors'
 
 const MRadio = () => {
     const [selectedValue, setSelectedValue] = useState("");
@@ -22,8 +23,27 @@ const MRadio = () => {
                     <FormControlLabel value="other" label="other" control={<Radio />}></FormControlLabel>
                 </RadioGroup>
             </FormControl>
-            <Radio name="radio-buttons" inputProps={{"aria-label": 'Yes'}} value="yes" checked={selectedValue === 'yes'} onChange={handleChange} />
-            <Radio name="radio-buttons" inputProps={{"aria-label": 'No'}} value="no" checked={selectedValue === 'no'} onChange={handleChange} />
+            <Radio
+                color="info"
+                name="radio-buttons"
+                inputProps={{"aria-label": 'Yes'}}
+                value="yes"
+                checked={selectedValue === 'yes'}
+                onChange={handleChange}
+            />
+            <Radio 
+                sx={{
+                    color: pink[800],
+                    '&.Mui-checked': {
+                        color: pink[600],
+                    },
+                }}
+                name="radio-buttons"
+                inputProps={{"aria-label": 'No'}}
+                value="no"
+                checked={selectedValue === 'no'}
+                onChange={handleChange}
+            />
         </>
     )
 }
