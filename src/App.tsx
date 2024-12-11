@@ -6,6 +6,7 @@ import MSelect from "./MSelect/MSelect";
 import MRadio from "./MRadio/MRadio";
 import MCheckbox from "./MCheckbox/MCheckbox";
 import MForm1 from "./MForm1/MForm1";
+import MTable from "./MTable/MTable";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/radio" element={<MRadio />} />
           <Route path="/checkbox" element={<MCheckbox />} />
           <Route path="/form1" element={<MForm1 />} />
+          <Route path="/table" element={<MTable />} />
         </Routes>
       </Router>
     </div>
