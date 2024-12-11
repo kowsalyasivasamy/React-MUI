@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.scss";
 
 import MButton from "./MButton/MButton";
 import MInput from "./MInput/MInput";
 import MSelect from "./MSelect/MSelect";
 import MRadio from "./MRadio/MRadio";
 import MCheckbox from "./MCheckbox/MCheckbox";
+import MForm1 from "./MForm1/MForm1";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
           <Route path="/select" element={<MSelect />} />
           <Route path="/radio" element={<MRadio />} />
           <Route path="/checkbox" element={<MCheckbox />} />
+          <Route path="/form1" element={<MForm1 />} />
         </Routes>
       </Router>
     </div>
